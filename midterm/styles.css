@@ -257,3 +257,60 @@ footer a {
     color: #ffb684;
     text-decoration: none;
 }
+
+@media (max-width: 600px) {
+    nav .menu,
+    nav .nav-links,
+    nav.logo,
+    .contact-button {
+        display: none; /* Hide menu, navigation links, and contact button */
+    }
+
+    
+    .intro {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .profile img {
+        width: 100%;
+    }
+    .profile .info h2 {
+        font-size: 40px;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+
+@media (max-width: 1024px) {
+    nav .logo {
+        font-size: 26px;
+    }
+    .nav-links li {
+        margin-right: 50px;
+    }
+    .intro {
+        flex-direction: column;
+    }
+    .profile img {
+        width: 50%;
+    }
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (min-width: 1025px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
