@@ -3,59 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Michael's website</title>
+    <title>Michael's Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#highlights">Highlights</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <header id="home">
-        <h1>Welcome to Michael's World</h1>
-        <p>Discover the journey, skills, and achievements of Michael</p>
+    <header>
+        <nav>
+            <img class="menu" src="images/menu.png" alt="menu button icon">
+            <div class="logo">Michael's website</div>
+            <ul class="nav-links">
+                <li><a href="#highlights">Highlights</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#scores">Scores</a></li>
+            </ul>
+            <button class="contact-button">Contact Me</button>
+        </nav>
     </header>
 
-    <section class="intro-section">
-        <img src="images/p1.jpg" alt="Picture of [Brother's Name]">
-        <h2>Hi, I'm Michael</h2>
-        <p>I love [insert interests/hobbies] and I'm really good at [insert skills]. Here are some highlights of my journey so far!</p>
-    </section>
-
-    <section id="skills" class="skills-section">
-        <h2>Skills and Achievements</h2>
-        <div class="skills-list">
-            <div class="skill">
-                <img src="path-to-skill-image.jpg" alt="Skill Image">
-                <h3>Skill Name</h3>
-                <p>Short description of the skill</p>
+    <section class="intro">
+        <div class="profile">
+            <img src="./images/me.jpg" alt="Michael's photo" >
+            <div class="info">
+                <h2>Nice to Meet You~</h2>
+                <p><strong>Age:</strong> 10</p>
+                <p><strong>Name:</strong> Michael Qi</p>
+                <p><strong>School:</strong> Beijing financial street runze school</p>
             </div>
-            <div class="skill">
-                <img src="path-to-skill-image.jpg" alt="Skill Image">
-                <h3>Skill Name</h3>
-                <p>Short description of the skill</p>
-            </div>
-            <!-- Add more skill blocks as needed -->
         </div>
     </section>
 
-    <section id="highlights" class="highlights-section">
-        <h2>Life Highlights</h2>
-        <ul>
-            <li>Event 1: Short description</li>
-            <li>Event 2: Short description</li>
-            <!-- Add more highlights as needed -->
-        </ul>
+     <div class="outer-container">
+            <div class="circle-row">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+
+            <div class="container">
+                <div class="item large">
+                    <p><strong>Since 2018</strong></p>
+                    <h1>"I served as the team captain in the football club and never missed a single game, leading the team to victory."</h1>
+                </div>
+                <div class="item medium">
+                    <p><strong>2023</strong></p>
+                    <h1>First prize of Beijing Aerobics Competition</h1>
+                </div>
+                <div class="item medium">
+                    <p><strong>2022</strong></p>
+                    <h1>"I won the title of Best Scorer in this year's football season, and I will work even harder."</h1>
+                </div>
+                <div class="item small">
+                    <p><strong>2024</strong></p>
+                    <h1>First prize of Beijing Painting Competition</h1>
+                </div>
+                <div class="item small">
+                    <p><strong>2024</strong></p>
+                    <h1>First prize in the football club competition</h1>
+                </div>
+                <div class="item large">
+                    <p><strong>Since 2020</strong></p>
+                    <h1>"I started learning music. I really enjoy singing for everyone, and I often practice to become a more confident person."</h1>
+                </div>
+                <div class="item medium">
+                    <p><strong>2024</strong></p>
+                    <h1>Second prize in the American Math Competition</h1>
+                </div>
+            </div>
+        </div>
+    
+        
     </section>
 
-    <footer id="contact">
-        <p>Contact us for more information: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    <section id="highlights">
+        <h3>Highlights</h3>
+        <div class="gallery">
+            <div class="gallery-item"><img src="images/el.JPG" alt="Highlight 1"></div>
+            <div class="gallery-item"><img src="images/he.JPG" alt="Highlight 2"></div>
+            <div class="gallery-item"><img src="images/hi.JPG" alt="Highlight 3"></div>
+            <div class="gallery-item"><img src="images/ho.JPG" alt="Highlight 4"></div>
+            <div class="gallery-item"><img src="images/iu.png" alt="Highlight 5"></div>
+            <div class="gallery-item"><img src="images/ol.JPG" alt="Highlight 6"></div>
+            <div class="gallery-item"><img src="images/oo.JPG" alt="Highlight 7"></div>
+            <div class="gallery-item"><img src="images/yu.png" alt="Highlight 8"></div>
+            <div class="gallery-item"><img src="images/ee.JPG" alt="Highlight 9"></div>
+            <div class="gallery-item"><img src="images/ch.jpg" alt="Highlight 10"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>Connect with me:</p>
+            <p>Email: <a href="mailto:iamMichael@gmail.com">iamMichael@gmail.com</a></p>
+            <p>Location: Beijing, China</p>
+            <p>&copy; 2024 Michael Qi. All Rights Reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
