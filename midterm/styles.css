@@ -145,7 +145,7 @@ nav .logo {
     height: 35px;
     background-color: #F6F6EF;
     border-radius: 50%;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .container {
