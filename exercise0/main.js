@@ -1,9 +1,15 @@
-let maxNum = 10;
 
-function squares(val){
-    for(let i = 1;i < val; i++){
-        console.log(i*i);
+function squares(val) {
+    for (let i = 1; i < val; i++) {
+        //    displayText.innerHTML += 'The square of '+ i +' is :'+(i * i)+ '</p>';
+        displayText.innerHTML += `
+    <p>
+    The square of ${i} is: ${i * i}.
+    </p>
+    `;
     }
 }
-
-squares(maxNum);
+goButton.onclick = function(){
+    squares(maxNum.value);
+}
+//squares(maxNum);
