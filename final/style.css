@@ -1,0 +1,164 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f4f7;
+    color: #333;
+    line-height: 1.6;
+}
+#main-text {
+    display: inline-block; 
+    border-bottom: 2px solid #caed66; 
+    padding-bottom: 2px; 
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.small-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #caed66; /* Highlighted title color */
+    margin-bottom: 1rem; /* Add spacing below the title */
+}
+
+.intro {
+    font-size: 1rem;
+    color: #d6d6d6; /* Softer color for the paragraph */
+    line-height: 1.8;
+}
+
+
+/* Header Styles */
+.main-header {
+    background: #333;
+    padding: 1rem 0;
+    color: #fff;
+}
+.main-header h1 {
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    text-transform: uppercase;
+}
+.main-header .code {
+    color: #edac66;
+}
+.navigation ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 1rem;
+}
+.navigation li {
+    margin: 0 1rem;
+}
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.navigation a:hover {
+    color: #caed66;
+}
+
+/* Translator Section */
+.translator-section {
+    text-align: center;
+    padding: 2rem 0;
+}
+.translator-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+.translator-mode {
+    margin-bottom: 1rem;
+}
+.mode-btn {
+    background-color: #d6d6d6;
+    color: #333;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+}
+.mode-btn.active {
+    background-color: #333;
+    color: #fff;
+}
+.translator-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto;
+    max-width: 800px;
+    gap: 1rem;
+}
+.input-box, .output-box {
+    flex: 1;
+    text-align: left;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 0.5rem;
+    background-color: #eaeaea;
+    color: #333;
+    border: 1px solid #333;
+    resize: none;
+}
+textarea:focus {
+    outline: none;
+    border-color: #edac66;
+}
+.action-buttons {
+    margin-top: 1rem;
+}
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #caed66;
+}
+
+/* Rules Section */
+.rules {
+    padding: 2rem 0;
+}
+.rules h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.rules ul {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+.rules li {
+    background: #eaeaea;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-left: 4px solid #caed66;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: #fff;
+}

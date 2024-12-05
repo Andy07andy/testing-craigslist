@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>MORSE <span class="code">CODE</span></h1>
+            <nav class="navigation">
+                <ul>
+                    <li id="main-text">Main</li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#chat">Chat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <h2 class="small-title">What is Morse Code</h2>
+            <p>
+                Morse code is a system of dots (short signals) and dashes (long signals) used to represent letters, numbers, and symbols.
+                This system allows for easy transmission of information using sound, light, or written symbols.
+            </p>
+        </section>
+        
+        <!-- 翻译器 Section -->
+        <section id="translator-section" class="translator-section">
+            <div class="container">
+                <h2>Morse Code Translator</h2>
+                <p>Translate text to Morse code or Morse code to text with ease.</p>
+                <div class="translator-mode">
+                    <button id="textToMorse" class="mode-btn active">Text to Morse</button>
+                    <button id="morseToText" class="mode-btn">Morse to Text</button>
+                </div>
+                <div class="translator-box">
+                    <div class="input-box">
+                        <label for="inputText" id="inputLabel">Enter Text:</label>
+                        <textarea id="inputText" placeholder="Type here..."></textarea>
+                    </div>
+                    <div class="output-box">
+                        <label for="outputText">Translated Result:</label>
+                        <textarea id="outputText" readonly></textarea>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button id="translateBtn">Translate</button>
+                    <button id="copyBtn">Copy</button>
+                    <button id="clearBtn">Clear</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 规则 Section -->
+        <section class="rules">
+            <div class="container">
+                <h2>Basic Rules</h2>
+                <ul>
+                    <li>Dots are short signals</li>
+                    <li>Dashes are long signals</li>
+                    <li>Use space to separate characters</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Morse Code Learning</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
