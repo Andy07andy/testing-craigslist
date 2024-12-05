@@ -2,11 +2,17 @@ let suits = ["♠", "♥", "♣", "♦"];
 
 let chars = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 
+let colorMap = {
+    "♠": "darkslateblue",
+    "♥": "brown",
+    "♣": "darkgoldenrod",
+    "♦": "teal",
+}
 
 let cards = []
 for (let char of chars) {
     for (let suit of suits) {
-        let color = "black";
+       
 
         if (suit === "♥" || suit === "♦") {
             color = "red";
@@ -15,7 +21,7 @@ for (let char of chars) {
         let card = {
             suit: suit,
             char: char,
-            color: color,
+            color:  colorMap[suit],
         };
 
         cards.push(card);
@@ -23,7 +29,7 @@ for (let char of chars) {
 }
 
 
-cards.forEach((cards) => {
+cards.forEach((card) => {
     let elt = document.createElement("section");
     elt.innerHTML = card.char + card.suit;
     elt.classList.add("card");
