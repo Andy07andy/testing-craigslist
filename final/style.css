@@ -1,19 +1,14 @@
-/* General Reset */
-* {
+\/* General Reset */ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f4f7;
     color: #333;
     line-height: 1.6;
-}
-#main-text {
-    display: inline-block; 
-    border-bottom: 2px solid #caed66; 
-    padding-bottom: 2px; 
 }
 
 .container {
@@ -21,19 +16,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
-.small-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #caed66; /* Highlighted title color */
-    margin-bottom: 1rem; /* Add spacing below the title */
-}
-
-.intro {
-    font-size: 1rem;
-    color: #d6d6d6; /* Softer color for the paragraph */
-    line-height: 1.8;
-}
-
 
 /* Header Styles */
 .main-header {
@@ -41,46 +23,106 @@ body {
     padding: 1rem 0;
     color: #fff;
 }
+
 .main-header h1 {
     font-size: 3rem;
     text-align: center;
     font-family: 'Helvetica', sans-serif;
     text-transform: uppercase;
 }
+
 .main-header .code {
     color: #edac66;
 }
+
+/*Button in visual effect */
+#restartButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50px);
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #fff;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#restartButton hover {
+    background:#edac66;
+    color: #fff;
+}
+
+/* Navigation Styles */
 .navigation ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin-top: 1rem;
+    padding: 0;
+    margin: 0;
 }
+
 .navigation li {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
+    font-size: 1.2rem;
+    /* Consistent font size */
+    font-weight: 500;
+    position: relative;
+    /* Allows styling adjustments */
 }
+
+.navigation li.active {
+    color: #caed66;
+    /* Highlight the active page */
+    cursor: default;
+    /* Prevents the cursor from showing as clickable */
+    font-weight: bold;
+    /* Emphasizes the active page */
+}
+
+.navigation li.active::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #caed66;
+    /* Visual underline for the active page */
+    border-radius: 2px;
+}
+
 .navigation a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
 }
+
 .navigation a:hover {
-    color: #caed66;
+    color: #edac66;
 }
+
 
 /* Translator Section */
 .translator-section {
     text-align: center;
     padding: 2rem 0;
 }
+
 .translator-section h2 {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 1rem;
 }
+
 .translator-mode {
     margin-bottom: 1rem;
 }
+
 .mode-btn {
     background-color: #d6d6d6;
     color: #333;
@@ -90,10 +132,12 @@ body {
     margin: 0 0.5rem;
     border-radius: 5px;
 }
+
 .mode-btn.active {
     background-color: #333;
     color: #fff;
 }
+
 .translator-box {
     display: flex;
     justify-content: space-between;
@@ -101,10 +145,21 @@ body {
     max-width: 800px;
     gap: 1rem;
 }
-.input-box, .output-box {
+
+.input-box,
+.output-box {
     flex: 1;
     text-align: left;
+    margin: 5px;
+
 }
+
+.input-label,
+.output-label {
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
 textarea {
     width: 100%;
     height: 150px;
@@ -113,14 +168,20 @@ textarea {
     color: #333;
     border: 1px solid #333;
     resize: none;
+    border-radius: 12px;
+    /* Adds rounded corners */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
+
 textarea:focus {
     outline: none;
     border-color: #edac66;
 }
+
 .action-buttons {
     margin-top: 1rem;
 }
+
 button {
     background-color: #333;
     color: #fff;
@@ -130,6 +191,7 @@ button {
     margin: 0 0.5rem;
     border-radius: 5px;
 }
+
 button:hover {
     background-color: #caed66;
 }
@@ -138,16 +200,19 @@ button:hover {
 .rules {
     padding: 2rem 0;
 }
+
 .rules h2 {
     text-align: center;
     margin-bottom: 1rem;
 }
+
 .rules ul {
     list-style: none;
     max-width: 600px;
     margin: 0 auto;
     text-align: left;
 }
+
 .rules li {
     background: #eaeaea;
     margin: 0.5rem 0;
