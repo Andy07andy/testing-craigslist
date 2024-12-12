@@ -1,5 +1,5 @@
 //const API_KEY = "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"; 
-const API_URL = "https://api.openai.com/v1/chat/completions";
+//const API_URL = "https://api.openai.com/v1/chat/completions";
 
 const sendButton = document.getElementById("send-button");
 const userInput = document.getElementById("user-input");
