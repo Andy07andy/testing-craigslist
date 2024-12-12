@@ -115,7 +115,7 @@ body {
 #send-button {
     padding: 10px 20px;
     margin-top: 10px;
-    background-color: #caed66; /* Preserved color for the button */
+    background-color: #caed66; 
     color: #222;
     border: none;
     border-radius: 4px;
@@ -123,7 +123,7 @@ body {
 }
 
 #send-button:hover {
-    background-color: #b5d85b; /* Slightly darker shade of the preserved color */
+    background-color: #b5d85b; 
 }
 
 /* Back button container styling */
@@ -161,20 +161,20 @@ body {
 /* iPad (768px and below) */
 @media (max-width: 768px) {
     .navigation ul {
-        flex-direction: column; /* Stack navigation items vertically */
+        flex-direction: column;
         width: 100%;
     }
 
     .navigation li {
-        margin: 10px 0; /* Add vertical spacing */
+        margin: 10px 0; 
     }
 
     #chat-container {
-        width: 95%; /* Reduce width for smaller screens */
+        width: 95%; 
     }
 
     #chat-box {
-        height: 250px; /* Reduce height */
+        height: 250px; 
     }
 
     #user-input {
@@ -214,10 +214,10 @@ body {
 /* Larger Screens (1440px and above) */
 @media (min-width: 1440px) {
     #chat-container {
-        max-width: 1200px; /* Expand chat container width */
+        max-width: 1200px; 
     }
 
     .navigation a {
-        font-size: 1.2rem; /* Increase font size for larger screens */
+        font-size: 1.2rem; 
     }
 }
