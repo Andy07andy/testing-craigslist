@@ -7,8 +7,26 @@
   <link rel="stylesheet" href="style.css">
   </head>
 <body>
+
+  <a href="https://i6.cims.nyu.edu/~zq2192/css/index.html" class="logo-container">
+    <img src="../final/logoAndy.svg" alt="logo of designer's name by using morse code" class="logo" />
+    <span class="logo-hover-text">ANDY QI</span>
+</a>
+
+  <audio id="background-music" loop muted>
+    <source src="bg.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <script>
+    // Unmute and play audio after user interaction
+    const audio = document.getElementById('background-music');
+    window.addEventListener('click', () => {
+      audio.muted = false;
+      audio.play();
+    });
+  </script>
   
-    
+
   <div id="chat-container">
     <h1>Morse Code Expert Chatbot</h1>
     <div id="chat-box">
@@ -27,6 +45,14 @@
     </button>
   </div>
 </div>
+
+    <footer>
+
+  <div>
+    <p>Copyright © 2024 Morse Codee. All rights reserved.</p>
+  </div>
+  
+  </footer>
 
   <script src="sketch.js" defer></script>
 </body>

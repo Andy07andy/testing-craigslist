@@ -9,6 +9,49 @@ body {
     align-items: center;
     color: #fff;
 }
+/* Logo Styles */
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    text-align: center;
+}
+
+.logo {
+    width: 40px;
+    /* Adjust logo size */
+    height: auto;
+}
+
+.logo-hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #b5d85b;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    line-height: 16px;
+}
+
+
+.logo-container:hover .logo {
+    opacity: 0.3;
+    filter: blur(2px);
+}
+
+.logo-container:hover .logo-hover-text {
+    opacity: 1;
+}
 
 /* Chat container styling */
 #chat-container {
@@ -110,4 +153,71 @@ body {
 .linkbutton:hover {
     background-color: #555;
     color: #fff;
+}
+
+ 
+/* Media Queries for Responsiveness */
+
+/* iPad (768px and below) */
+@media (max-width: 768px) {
+    .navigation ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        width: 100%;
+    }
+
+    .navigation li {
+        margin: 10px 0; /* Add vertical spacing */
+    }
+
+    #chat-container {
+        width: 95%; /* Reduce width for smaller screens */
+    }
+
+    #chat-box {
+        height: 250px; /* Reduce height */
+    }
+
+    #user-input {
+        width: 95%;
+    }
+
+    #send-button {
+        width: 100%;
+    }
+    
+}
+
+/* iPhone (480px and below) */
+@media (max-width: 480px) {
+    .navigation ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .navigation li {
+        margin: 10px 0;
+    }
+
+    .navigation a {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    #chat-box {
+        height: 200px;
+    }
+
+    
+}
+
+/* Larger Screens (1440px and above) */
+@media (min-width: 1440px) {
+    #chat-container {
+        max-width: 1200px; /* Expand chat container width */
+    }
+
+    .navigation a {
+        font-size: 1.2rem; /* Increase font size for larger screens */
+    }
 }

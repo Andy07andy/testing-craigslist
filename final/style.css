@@ -95,7 +95,7 @@ main {
 }
 
 .logo {
-    width: 60px;
+    width: 40px;
     /* Adjust logo size */
     height: auto;
 }
@@ -105,8 +105,8 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    font-size: 16px;
+    color: #b5d85b;
+    font-size: 14px;
     font-weight: bold;
     text-shadow: 0 0 5px black;
     opacity: 0;
@@ -305,13 +305,6 @@ button:hover {
     color: #ca9a56;
 }
 
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background: #333;
-    color: #fff;
-}
 
 
 
@@ -352,4 +345,182 @@ footer {
 
 .play-btn:hover {
     color: #000;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-logo {
+    max-width: 300px;
+  }
+  
+  .footer-logo h1 {
+    color: #ffcc00;
+    margin: 0;
+  }
+  
+  .footer-logo p {
+    font-size: 14px;
+    margin: 10px 0 15px;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .footer-section h3 {
+    padding-top: 50px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-social {
+    max-width: 200px;
+  }
+  
+  .footer-social h3 {
+    padding-top: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  .footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+  
+
+  /* Default styles for larger screens (desktop/laptop) */
+
+/* Media Query for Laptop Screens (1280px and below) */
+@media (max-width: 1280px) {
+    body {
+        font-size: 16px;
+    }
+    .navigation ul {
+        flex-direction: row; /* Ensure horizontal navigation */
+    }
+    .translator-box {
+        flex-direction: column; /* Stack input and output vertically */
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-links {
+        gap: 20px;
+    }
+}
+
+/* Media Query for iPad Screens (768px and below) */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2rem;
+    }
+    .navigation ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .translator-mode {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .translator-box {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-container {
+        padding: 10px;
+    }
+    .footer-section h3 {
+        font-size: 14px;
+    }
+    .footer-social img {
+        width: 40px;
+        height: auto;
+    }
+}
+
+/* Media Query for iPhone Screens (375px and below) */
+@media (max-width: 375px) {
+    body {
+        font-size: 14px;
+    }
+    .main-header h1 {
+        font-size: 1.5rem;
+    }
+    .translator-mode button {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .translator-box {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .input-box textarea,
+    .output-box textarea {
+        font-size: 14px;
+        height: 100px; /* Adjust height for smaller screens */
+    }
+    .footer-container {
+        text-align: center;
+    }
+    .footer-logo h1 {
+        font-size: 1.5rem;
+    }
+    .social-icons img {
+        width: 30px;
+        height: auto;
+    }
 }
