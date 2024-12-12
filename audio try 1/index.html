@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="sketch.js"></script>
+</head>
+
+<body>
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <nav class="navigation">
+                <ul>
+                    <li class="active">Main</li>
+                    <li><a href="../resources/index.html">Resources</a></li>
+                    <li><a href="../OpenAi/index.html">Chat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <button id="restartButton">Restart</button>
+
+
+
+
+
+
+        
+       <!-- translator Section -->
+<section class="translator-section">
+    <div class="container">
+        <h2>Morse Code Translator</h2>
+        <p>Morse Code Translator is a Morse Code Decoder, Generator, Decipher, Converter, Encoder to translate Morse Code to English, or translate English to Morse Code.</p>
+        <div class="translator-mode">
+            <button id="textToMorse" class="mode-btn active">Text to Morse</button>
+            <button id="morseToText" class="mode-btn">Morse to Text</button>
+        </div>
+        <div class="translator-box">
+            <div class="input-box">
+                <div class="input-header">
+                    <label for="inputText" class="input-label">Input</label>
+                    <button id="playInputMorseBtn" class="play-btn" title="Read Input">&#9658;</button>
+                </div>
+                <textarea id="inputText" placeholder="Enter your text or Morse code..."></textarea>
+            </div>
+            
+            
+            <div class="output-box">
+                <div class="output-header">
+                    <label for="outputText" class="output-label">Output</label>
+                    <button id="playMorseBtn" class="play-btn" title="Play Morse Code">&#9658;</button>
+                </div>
+                <textarea id="outputText" placeholder="Your translation will appear here..." readonly></textarea>
+            </div>            
+        </div>
+        <div class="action-buttons">
+            <button id="translateBtn">Translate</button>
+            <button id="copyBtn">Copy</button>
+            <button id="clearBtn">Clear</button>
+        </div>
+    </div>
+</section>
+
+
+
+        <section class="container">
+            <h1 class="small-title">What is Morse Code</h1>
+            <p>
+                Morse code is a system of dots (short signals) and dashes (long signals) used to represent letters,
+                numbers, and symbols.
+                This system allows for easy transmission of information using sound, light, or written symbols.
+            </p>
+        </section>
+
+
+        <!-- 规则 Section -->
+        <section class="rules">
+            <div class="container">
+                <h1>Basic Rules</h1>
+                <ul>
+                    <li>Dots are short signals</li>
+                    <li>Dashes are long signals</li>
+                    <li>Use space to separate characters</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Morse Code Learning</p>
+        </div>
+    </footer>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

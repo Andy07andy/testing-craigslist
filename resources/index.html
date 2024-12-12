@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Morse Code Resources</title>
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+
+<header class="main-header" id="mainHeader">
+    <h1>Morse Code Resources</h1>
+    <div class="container">
+        <nav class="navigation">
+            <ul>
+                <li><a href="../final/index.html">Main</a><li>
+                <li class="active">Resources</li>
+                <li><a href="../OpenAi/index.html">Chat</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Navigation Tabs -->
+   
+
+        <section id="character-reference">
+        <h2>Detailed Character Reference</h2>
+        <nav class="tabs">
+            <button class="tab-button active" data-target="letters">Letters</button>
+            <button class="tab-button" data-target="digits">Digits</button>
+            <button class="tab-button" data-target="punctuation">Punctuation</button>
+        </nav>
+        <p>
+            Use the tabs above to switch between character sets.  
+            Each character shows its Morse code and a brief mnemonic.
+        </p>
+
+        
+
+        <!-- Horizontal scroll containers -->
+        <div class="char-grid-container">
+            <div class="char-scroll-container" id="lettersGrid"></div>
+            <div class="char-scroll-container hidden" id="digitsGrid"></div>
+            <div class="char-scroll-container hidden" id="punctGrid"></div>
+        </div>
+
+        <!-- Copy Buttons -->
+        <div class="copy-all-container">
+            <button id="copyCurrentButton">Copy Letters</button>
+            <button id="copyAllButton">Copy All Resources</button>
+            <button id="downloadPDFButton">Download as PDF</button> 
+        </div>
+
+    </section>
+
+    <section id="historical-context">
+        <h2>Historical Context & Famous Messages</h2>
+        <p>Morse code revolutionized communication. Here are a few historical highlights.</p>
+    
+        <div class="historical-message">
+            <h3>The First Morse Message (1844)</h3>
+            <p><strong>Text:</strong> "What Hath God Wrought?"</p>
+            <p>
+                Sent by Samuel Morse from the U.S. Capitol to Baltimore, this message marked the first 
+                successful use of the telegraph system. It demonstrated the groundbreaking potential of 
+                instantaneous communication.
+            </p>
+            <div class="code-block">
+                •••• •••• • — • •••
+            </div>
+        </div>
+    
+        <div class="historical-message">
+            <h3>The Titanic Distress Call (1912)</h3>
+            <p><strong>Text:</strong> CQD and SOS</p>
+            <p>
+                When the RMS Titanic hit an iceberg, its operators sent the distress signals CQD and SOS. 
+                This tragic event popularized the SOS signal as the universal cry for help.
+            </p>
+            <div class="code-block">
+                CQD = — • — • — — • — • <br>
+                SOS = • • • — — — • • •
+            </div>
+        </div>
+    
+        <div class="historical-message">
+            <h3>V-E Day Announcement (1945)</h3>
+            <p><strong>Text:</strong> "Victory in Europe"</p>
+            <p>
+                On May 8, 1945, Morse code was used to broadcast the end of World War II in Europe. The 
+                announcement symbolized peace after years of conflict.
+            </p>
+            <div class="code-block">
+                V = • • • —
+            </div>
+        </div>
+    
+        <div class="historical-message">
+            <h3>The Apollo 11 Moon Landing (1969)</h3>
+            <p><strong>Text:</strong> "One Small Step for Man"</p>
+            <p>
+                NASA engineers used Morse code as a fallback communication system during early space exploration 
+                missions. While not the primary system for Apollo 11, Morse code’s simplicity proved essential 
+                in critical moments.
+            </p>
+            <div class="code-block">
+                • — — • • — • • • • — • • • — —
+            </div>
+        </div>
+    </section>
+    
+</main>
+
+<footer>
+    © 2024 Morse Code Resources. All rights reserved.
+</footer>
+
+<script src="main.js"></script>
+
+
+</body>
+</html>

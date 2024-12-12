@@ -66,93 +66,57 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// 默认模式
-let currentMode = "textToMorse";
-
-// 更新模式的函数
-function updateMode(mode) {
-    currentMode = mode;
-
-    // 切换按钮的 active 样式
-    document.getElementById("textToMorse").classList.toggle("active", mode === "textToMorse");
-    document.getElementById("morseToText").classList.toggle("active", mode === "morseToText");
-
-    // 更新占位符和功能说明
-    const inputText = document.getElementById("inputText");
-    const outputText = document.getElementById("outputText");
-
-    if (mode === "textToMorse") {
-        inputText.placeholder = "Enter your text...";
-        outputText.placeholder = "Your Morse code translation will appear here...";
-    } else {
-        inputText.placeholder = "Enter your Morse code...";
-        outputText.placeholder = "Your text translation will appear here...";
-    }
-}
-
-// 读取文本的语音功能
-function playSpeech(text) {
-    if (text) {
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = "en-US";
-        utterance.pitch = 1;
-        utterance.rate = 1;
+function playSpeech() {
+    const input = document.getElementById('inputText').value.trim();
+    if (input) {
+        const utterance = new SpeechSynthesisUtterance(input);
+        // Optional: Set voice, language, pitch, rate, etc.
+        utterance.lang = 'en-US'; 
+        utterance.pitch = 1;  
+        utterance.rate = 1;   
+        
+        // Speak the typed text
         speechSynthesis.speak(utterance);
     }
 }
 
-// 播放 Morse Code 的音效
-function playMorseCode(morseCode) {
-    if (!morseCode) return;
-
+function playMorseCode() {
+    const output = document.getElementById('outputText').value.trim();
+    if (!output) return;
+    
+    // Example: simple tone generator using Web Audio API
     const context = new (window.AudioContext || window.webkitAudioContext)();
-    const dotDuration = 0.1; 
-    const dashDuration = 0.3; 
-    const symbolGap = 0.1; 
-    const letterGap = 0.3; 
-    const wordGap = 0.7; 
-
+    const dotDuration = 0.1; // seconds
+    const dashDuration = 0.3; // seconds
+    const symbolGap = 0.1;   // gap between parts of the same letter
+    const letterGap = 0.3;   // gap between letters
+    const wordGap = 0.7;     // gap between words
+    
     let currentTime = context.currentTime;
-    const words = morseCode.split("   "); 
-    words.forEach((word) => {
-        const letters = word.trim().split(" ");
-        letters.forEach((letter) => {
-            letter.split("").forEach((symbol) => {
+    const words = output.split('   '); // Assuming 3 spaces separate words
+    words.forEach((word, wIndex) => {
+        const letters = word.trim().split(' ');
+        letters.forEach((letter, lIndex) => {
+            // Each letter is composed of dots (.) and dashes (-)
+            letter.split('').forEach((symbol, sIndex) => {
                 const oscillator = context.createOscillator();
-                oscillator.type = "sine";
-                oscillator.frequency.value = 600; 
+                oscillator.type = 'sine';
+                oscillator.frequency.value = 600; // frequency in Hz (Morse tone)
                 oscillator.connect(context.destination);
 
-                const duration = symbol === "." ? dotDuration : dashDuration;
+                let duration = symbol === '.' ? dotDuration : dashDuration;
                 oscillator.start(currentTime);
                 oscillator.stop(currentTime + duration);
                 currentTime += duration + symbolGap;
             });
+            // Add a gap after each letter
             currentTime += letterGap;
         });
+        // Add a longer gap after each word
         currentTime += wordGap;
     });
 }
 
-// 根据当前模式动态设置按钮的功能
-document.getElementById("playInputMorseBtn").addEventListener("click", () => {
-    const input = document.getElementById("inputText").value.trim();
-    if (currentMode === "textToMorse") {
-        playSpeech(input);
-    } else {
-        playMorseCode(input); 
-    }
-});
+document.getElementById('playMorseBtn').addEventListener('click', playMorseCode);
 
-document.getElementById("playMorseBtn").addEventListener("click", () => {
-    const output = document.getElementById("outputText").value.trim();
-    if (currentMode === "textToMorse") {
-        playMorseCode(output); 
-    } else {
-        playSpeech(output);
-    }
-});
-
-// 模式切换按钮事件监听
-document.getElementById("textToMorse").addEventListener("click", () => updateMode("textToMorse"));
-document.getElementById("morseToText").addEventListener("click", () => updateMode("morseToText"));
+document.getElementById('playInputMorseBtn').addEventListener('click', playSpeech);

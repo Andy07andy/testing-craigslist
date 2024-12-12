@@ -1,56 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morse Code</title>
+    <title><a href="../OpenAi/index.html">Morse Code</a></title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
     <script src="sketch.js"></script>
+    <!-- Fonts Section -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Butcherman&family=Kaushan+Script&family=Satisfy&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee+Shade&family=Butcherman&family=Kaushan+Script&family=Satisfy&display=swap" rel="stylesheet"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee+Shade&family=Butcherman&family=Kaushan+Script&family=Limelight&family=Satisfy&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="main-header" id="mainHeader">
+        <a href="https://i6.cims.nyu.edu/~zq2192/css/index.html" class="logo-container">
+            <img src="./logoAndy.svg" alt="logo of designer's name by using morse code" class="logo" />
+            <span class="logo-hover-text">ANDY QI</span>
+        </a>
+    
         <div class="container">
-            <h1>MORSE <span class="code">CODE</span></h1>
             <nav class="navigation">
                 <ul>
                     <li class="active">Main</li>
-                    <li><a href="#resources">Resources</a></li>
-                    <li><a href="#chat">Chat</a></li>
+                    <li><a href="../resources/index.html">Resources</a></li>
+                    <li><a href="../OpenAi/index.html">Chat</a></li>
                 </ul>
             </nav>
         </div>
-    </header>
-    <main>
-        <button id="restartButton">Restart</button>
-
-
-        <section class="container">
-            <h2 class="small-title">What is Morse Code</h2>
-            <p>
-                Morse code is a system of dots (short signals) and dashes (long signals) used to represent letters, numbers, and symbols.
-                This system allows for easy transmission of information using sound, light, or written symbols.
-            </p>
-        </section>
         
-        <!-- 翻译器 Section -->
+        <button id="restartButton" style="display: none;">Restart</button>
+
+
+    </header>
+    
+    <main>
+        
+        <!-- translator Section -->
         <section class="translator-section">
             <div class="container">
                 <h2>Morse Code Translator</h2>
-                <p>Translate text to Morse code or Morse code to text with ease.</p>
+                <p>Morse Code Translator is a Morse Code Decoder, Generator, Decipher, Converter, Encoder to translate Morse Code to English, or translate English to Morse Code.</p>
                 <div class="translator-mode">
                     <button id="textToMorse" class="mode-btn active">Text to Morse</button>
                     <button id="morseToText" class="mode-btn">Morse to Text</button>
                 </div>
                 <div class="translator-box">
                     <div class="input-box">
-                        <label for="inputText" class="input-label">Input</label>
+                        <div class="input-header">
+                            <label for="inputText" class="input-label">Input</label>
+                            <button id="playInputMorseBtn" class="play-btn" title="Read Input">&#9658;</button>
+                        </div>
                         <textarea id="inputText" placeholder="Enter your text or Morse code..."></textarea>
                     </div>
+                    
+                    
                     <div class="output-box">
-                        <label for="outputText" class="output-label">Output</label>
+                        <div class="output-header">
+                            <label for="outputText" class="output-label">Output</label>
+                            <button id="playMorseBtn" class="play-btn" title="Play Morse Code">&#9658;</button>
+                        </div>
                         <textarea id="outputText" placeholder="Your translation will appear here..." readonly></textarea>
-                    </div>
+                    </div>            
                 </div>
                 <div class="action-buttons">
                     <button id="translateBtn">Translate</button>
@@ -59,17 +80,57 @@
                 </div>
             </div>
         </section>
-        
 
-        <!-- 规则 Section -->
+
+        <section class="container">
+            <h1 class="small-title">What is Morse Code</h1>
+            <p>Morse code is a system of dots (short signals) and dashes (long signals) used to represent letters, numbers, and symbols. This system allows for easy transmission of information using sound, light, or written symbols.</p>
+        </section>
+
+
+        <!-- Rule Section -->
         <section class="rules">
             <div class="container">
-                <h2>Basic Rules</h2>
+                <h1>Basic Rules</h1>
                 <ul>
                     <li>Dots are short signals</li>
                     <li>Dashes are long signals</li>
                     <li>Use space to separate characters</li>
                 </ul>
+
+                <h1>Why Use a Morse Code Translator?</h1>
+                <ul>
+                    <li><b>Learning:</b> <br>Translators provide an easy way to study Morse Code at your own pace.</br></li>
+                    <li><b>Communication:</b> <br>Send encoded messages that only others with Morse knowledge can read.</br></li>
+                    <li><b>Decoding:</b> <br>Translate received Morse Code into understandable text.</br></li>
+                </ul>
+
+                <h1>How to Use a Morse Code Translator</h1>
+                <ul>
+                    <li><b>Translating Morse Code to English:</b><br>Copy the Morse code and paste it into the Morse code translator at this page. The tool will quickly convert the Morse code to English.</br></li>
+                    <li><b>Converting English to Morse Code:</b><br>Type your message into the input box on the Morse code generator at this page. The tool will convert text to Morse code instantly, allowing you to copy and use the output as needed.</br></li>
+                </ul>
+
+                <h1>Learn How to Read and Write Morse Code</h1>
+                <ul>
+                    <li><a href="https://www.wikihow.com/Learn-Morse-Code" >How to Read Morse Code</a></li>
+                    <li><a href="https://www.quora.com/How-do-I-write-a-Morse-code-on-paper" >How to Write Morse Code</a></li>
+                </ul>
+
+                <h1>Popular Uses for Morse Code in the Modern World</h1>
+                <ul>
+                    <li><b>In Communication:</b> <br>Although it is no longer used for mainstream communication, Morse code is still widely recognized for emergencies, such as the <b>SOS Morse code signal</b>, which can be transmitted via light, sound, or even tapping.</br></li>
+                    <li><b>In Art and Fashion</b> <br>Morse code has become a popular symbol in fashion, particularly in accessories like Morse code bracelets, which use dots and dashes to encode meaningful messages.</br></li>
+                </ul>
+
+                <h1>If you have any other questions?</h1>
+                <ul>
+                    <li><a href="../OpenAi/index.html">Click here and ask your questions</a></li>
+                </ul>
+                <img src="480.jpg" alt="image of morse code combine modern elements and traditional elements"  srcset="960.png 960w, 1440.png 1440w" width="480px" height = auto >
+            
+
+
             </div>
         </section>
     </main>
@@ -79,7 +140,8 @@
         </div>
     </footer>
 
-  
+
     <script src="main.js"></script>
 </body>
+
 </html>
