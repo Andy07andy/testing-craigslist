@@ -54,7 +54,6 @@ nav .logo {
 .nav-links li:hover {
     transform: scale(1.05);
     text-decoration: underline;
-    color: #D7FFDB
 }
 
 .nav-links a {
@@ -108,7 +107,7 @@ nav .logo {
 }
 
 
-.info h2 {
+.info h1 {
     color: #005b5b;
     margin-top: 100px;
     font-family: fontone;
@@ -237,7 +236,7 @@ strong {
 
 }
 
-h3 {
+h2 {
     color: #005b5b;
     margin: 80px;
     font-family: fontone;
