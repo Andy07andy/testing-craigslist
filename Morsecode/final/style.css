@@ -1,3 +1,9 @@
+
+@font-face {
+    font-family: Beach Summer;
+    src: url("./../fonts/Beach Summer.otf");
+  }
+
 /* General Reset */
 * {
     margin: 0;

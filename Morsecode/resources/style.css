@@ -364,15 +364,6 @@ footer {
     text-decoration: underline;
   }
   
-  .footer-social {
-    max-width: 200px;
-  }
-  
-  .footer-social h3 {
-    padding-top: 50px;
-    margin-bottom: 10px;
-  }
-  
   .social-icons {
     display: flex;
     gap: 10px;
@@ -444,10 +435,7 @@ footer {
     .footer-section h3 {
         font-size: 14px;
     }
-    .footer-social img {
-        width: 40px;
-        height: auto;
-    }
+
 }
 
 /* Media Query for iPhone Screens (375px and below) */
